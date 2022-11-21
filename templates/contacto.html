@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block content %}
+        
+<form action="/agrega_comenta" method="POST">
+   <div class="container">
+          <div class="form-row">
+      </div>
+    
+      <div class="col-md-6">
+          <label for="nom" class="form-label">Nombre</label>
+          <input type="text" class="form-control" name="nom" id="nom" required>
+      </div>
+      <div class="col-md-4">
+          <label for="apellido" class="form-label">Apellido</label>
+          <input type="text" class="form-control" name="apellido" id="apellido"
+      required></input>
+      </div>
+      <div class="col-md-4">
+        <label for="edad" class="form-label">Edad</label>
+        <input type="text" class="form-control" name="edad" id="edad"
+    required></input>
+    </div>
+      
+        <div class="mb-8">
+            <label for="correo" class="form-label">Escribe aquí tu correo electrónico</label>
+            <input type="email" class="form-control" name="correo" id="correo" placeholder="nombre@ejemplo.com">
+      </div>
+      
+      <div class="col-md-5">
+          <label for="tel" class="form-label">Teléfono</label>
+          <input type="text" class="form-control" name="tel" id="tel" 
+      required></input>
+      </div>
+      <div class="col-md-7">
+          <label for="direc" class="form-label">Dirección</label>
+          <input type="text" class="form-control" name="direc" id="direc"
+      required></input>
+      </div>
+    
+          <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+
+{% endblock %}

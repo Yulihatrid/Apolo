@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <table width="100%" border="1" cellpadding="0" bordercolor="#000000">
+    <tbody>
+    <tr>
+    <td color="FFFFFF" bgcolor="#98D3F9" valign="top">
+    <right><h3><a href="/contacto">Agregar Registro</a></h3></right>
+    <center><h3>Registrados</h3></center>
+    <table width="100%" border="1" cellpadding="0" bordercolor="#000000">
+    <thead>
+      <tr>
+        <td color="white" bgcolor="black">Nombre</td>
+        <td color="white" bgcolor="black">Apellido</td>
+        <td color="white" bgcolor="black">Sexo</td>
+        <td color="white" bgcolor="black">Correo Electrónico</td>
+        <td color="white" bgcolor="black">Teléfono</td>
+        <td color="white" bgcolor="black">Dirección</td>
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in comentario %}
+        <tr>
+        <td width="14%">
+           {{i.1}}
+        </td>
+        <td width="14%">
+           {{i.2}}
+        </td>
+        <td width="8%">
+          {{i.3}}
+       </td>
+       <td width="20%">
+        {{i.4}}
+       </td>
+       <td width="14%">
+        {{i.5}}
+        </td>
+        <td width="14%">
+          {{i.6}}
+       </td>
+       
+        <td bgcolor="#1EB2CC" width="8%">
+        <center><a href="/editar/{{i.0}}" style="">Editar</a></center>
+        </td>
+        <td bgcolor="#BDBEC1" width="8%">
+        <center><a href="/borrar/{{i.0}}" style="">Borrar</a></center>
+        </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+{% endblock %}

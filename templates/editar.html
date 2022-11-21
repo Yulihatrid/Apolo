@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<form action="/editar_comenta/{{dat.0}}" method="post">
+   <div class="container">
+          <div class="form-row">
+               <div class="col-xs-12 ">
+                  <div class="mb-3">
+                        <label for="nom" class="form-label">Nombre/label>
+                        <input type="text" class="form-control" name="nom" id="nom" value="{{dat.1}}"></input>
+                  </div>
+                  <div class="mb-3">
+                        <label for="apellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" name="apellido" id="apellido" value="{{dat.2}}"></input>
+                  </div>
+                  <div class="mb-3">
+                        <label for="edad" class="form-label">Edad</label>
+                        <input type="text" class="form-control" name="edad" id="edad" value="{{dat.3}}"></input>
+                  </div>
+                <div class="mb-3">
+                      <label for="correo" class="form-label">Escribe aqui tu correo electronico</label>
+                      <input type="text" class="form-control" name="correo" id="correo" placeholder="nombre@ejemplo.com" value="{{dat.4}}">
+                </div>
+                <div class="mb-3">
+                      <label for="tel" class="form-label">Télefono</label>
+                      <input type="text" class="form-control" name="tel" id="tel" value="{{dat.5}}"></input>
+                </div>
+                <div class="mb-3">
+                  <label for="direc" class="form-label">Dirección</label>
+                  <input type="text" class="form-control" name="direc" id="direc" value="{{dat.6}}"></input>
+            </div>
+                </div>
+          </div>
+    </div>
+          <button type="submit" class="btn btn-primary">Actualizar</button>
+</form>
+
+{% endblock %}

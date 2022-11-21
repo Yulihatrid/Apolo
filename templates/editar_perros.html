@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<form action="/edi_comenta/{{dat.0}}" method="post">
+   <div class="container">
+          <div class="form-row">
+               <div class="col-xs-12 ">
+                  <div class="mb-3">
+                        <label for="nomb" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" name="nomb" id="nomb" value="{{dat.1}}"></input>
+                  </div>
+                  <div class="mb-3">
+                        <label for="raza" class="form-label">Raza</label>
+                        <input type="text" class="form-control" name="raza" id="raza" value="{{dat.2}}"></input>
+                  </div>
+                  <div class="mb-3">
+                        <label for="sexo" class="form-label">Sexo</label>
+                        <input type="text" class="form-control" name="sexo" id="sexo" value="{{dat.3}}"></input>
+                  </div>
+                <div class="mb-3">
+                      <label for="tam" class="form-label">Tamaño</label>
+                      <input type="text" class="form-control" name="tam" id="tam" value="{{dat.4}}">
+                </div>
+                <div class="mb-3">
+                      <label for="vac" class="form-label">Vacunas</label>
+                      <input type="text" class="form-control" name="vac" id="vac" value="{{dat.5}}"></input>
+                </div>
+                <div class="mb-3">
+                  <label for="ed" class="form-label">Edad</label>
+                  <input type="text" class="form-control" name="ed" id="ed" value="{{dat.6}}"></input>
+            </div>
+                </div>
+          </div>
+    </div>
+          <button type="submit" class="btn btn-primary">Actualizar</button>
+</form>
+
+{% endblock %}

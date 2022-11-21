@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <table width="100%" border="1" cellpadding="0" bordercolor="#000000">
+    <tbody>
+    <tr>
+    <td color="FFFFFF" bgcolor="#465F5A" valign="top">
+    <right><h3><a href="/perros">Agregar Registro</a></h3></right>
+    <center><h3>Registrados</h3></center>
+    <table width="100%" border="1" cellpadding="0" bordercolor="#000000">
+    <thead>
+      <tr>
+        <td color="white" bgcolor="black">Nombre</td>
+        <td color="white" bgcolor="black">Raza</td>
+        <td color="white" bgcolor="black">Sexo</td>
+        <td color="white" bgcolor="black">Tamaño</td>
+        <td color="white" bgcolor="black">Vacunas</td>
+        <td color="white" bgcolor="black">Edad</td>
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in comentario %}
+        <tr>
+        <td width="14%">
+           {{i.1}}
+        </td>
+        <td width="14%">
+           {{i.2}}
+        </td>
+        <td width="8%">
+          {{i.3}}
+       </td>
+       <td width="20%">
+        {{i.4}}
+       </td>
+       <td width="14%">
+        {{i.5}}
+        </td>
+        <td width="14%">
+          {{i.6}}
+       </td>
+       
+        <td bgcolor="#2B2D83" width="8%">
+        <center><a href="/edi/{{i.0}}" style="">Editar</a></center>
+        </td>
+        <td bgcolor="#3C3EC5" width="8%">
+        <center><a href="/borr/{{i.0}}" style="">Borrar</a></center>
+        </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+{% endblock %}
